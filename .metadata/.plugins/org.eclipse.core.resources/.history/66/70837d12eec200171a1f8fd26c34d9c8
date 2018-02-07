@@ -1,0 +1,36 @@
+package leetcode;
+
+
+class Solution {
+    public String convert(String s, int numRows) {//行数
+    	int colGroup = 0;//每组的列数
+    	int sizeGroup = 0;//每组的大小
+    	int numGroup = 0;//组的个数
+    	if (numRows%2 == 0) {
+    		colGroup = numRows/2;
+    		sizeGroup = (numRows+2)*colGroup/sizeGroup;
+    	}else {
+    		colGroup = (numRows + 1)/2;
+    		sizeGroup = (numRows+1)*colGroup/sizeGroup;
+    	}
+		numGroup = (int)  Math.ceil(new Double(s)/sizeGroup);
+    	String OutputStream = new String();
+		return OutputStream;
+    	
+//		for (int i = 0; i < numGroup; i++) {
+//			for (int j = 0; j < sizeGroup; j ++) {
+//				OutputStream[i] = s[i*sizeGroup + j];
+//			}
+    }
+    
+    public static void main(String[] args) {
+    	int a = 5;
+    	int b = 4;
+    	System.out.println(new Double(a)/b);
+    	String c="ab,cd,ef";
+    	String[] d = c.split(",");
+    	System.out.println(d[1]);
+    	
+    }
+    
+}

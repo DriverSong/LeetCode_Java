@@ -1,0 +1,43 @@
+package leetcode;
+
+class Reverse_Integer {
+    public static int reverse(int x) {
+    	//判断是否溢出
+    	if (x<-Math.pow(2,31 )|| x > (Math.pow(2,31 ) - 1 )){
+    		return 0 ;
+    	}
+    	//输出
+    	int reverse_x = 0;
+    	//int转stringBuffer
+        StringBuffer buffer = new StringBuffer();
+        //判断正负
+        boolean IsPositive = true ;
+    	if(x < 0) {
+    		IsPositive = false;
+    		//取模
+    		x = - x;
+    	}
+    	//从个位开始读取
+        while(true) {
+        	int temp = x%10;
+        	System.out.println(temp);
+        	buffer.append(temp);
+        	if(new Double(x)/10 > 1) {
+        		x = x - temp*10;
+        	}else {
+				break;
+			}
+        }
+        //StringBuffer转String转int
+        int temp_x = Integer.parseInt(buffer.toString());
+        //判断输出是否溢出
+        if(temp_x>=-Math.pow(2,31 )&& temp_x <= (Math.pow(2,31 ) - 1 )){
+        		reverse_x = temp_x;
+        }
+        return reverse_x;
+    }
+    public static void main(String[] arg) {
+    	int a = reverse(123);
+    	System.out.println(a);
+    }
+}

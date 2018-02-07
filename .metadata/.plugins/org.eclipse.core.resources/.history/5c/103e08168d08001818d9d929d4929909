@@ -1,0 +1,38 @@
+package leetcode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class NextPermutation {
+	public void nextPermutation(int[] nums) {
+        int length = nums.length;
+        if (length <= 1) {
+			return;
+		}
+        int left = length - 1;
+        int right = length - 1;
+        for(int i = length - 1; i > 0; i--) {
+        	if (nums[i] <= nums[i - 1]) {
+        		left = i - 1;
+			}else {
+				for(int j = i; j < length; j++) {
+					if (nums[left] < nums[j]) {
+						right = j;
+					}else {
+						break;
+					}
+				}
+				nums[left] ^= nums[right];
+				nums[right] ^= nums[left];
+				nums[left] ^= nums[right];
+				return;
+			}
+        }
+        Arrays.sort(nums);
+        return;
+    }
+	private static void main(String arg[]) {
+		
+	}
+}

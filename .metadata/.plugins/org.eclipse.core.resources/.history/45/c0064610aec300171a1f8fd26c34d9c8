@@ -1,0 +1,10 @@
+package leetcode;
+
+public class Test_StringBuffer {
+	public static void main(String[] arg) {
+		int a = (int) Math.pow(2, 31);
+		System.out.println(new Double(a)/10>1);
+		System.out.println(Math.pow(2, 31) == -Math.pow(2, 31));
+	}
+
+}

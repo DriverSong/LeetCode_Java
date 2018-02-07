@@ -1,0 +1,52 @@
+package leetcode;
+
+
+class Solution {
+    public String convert(String s, int numRows) {//行数
+    	String[] s_matrix = s.split("");//字符串转数组
+    	int len = s.length();
+    	int colGroup = 0;//每组的列数
+    	int sizeGroup = 0;//每组的大小
+    	int numGroup = 0;//组的个数
+    	if (numRows%2 == 0) {
+    		colGroup = numRows/2;
+    		sizeGroup = (numRows+2)*colGroup/sizeGroup;
+    	}else {
+    		colGroup = (numRows + 1)/2;
+    		sizeGroup = (numRows+1)*colGroup/sizeGroup;
+    	}
+		numGroup = (int)  Math.ceil(new Double(s)/sizeGroup);
+    	StringBuffer[] output = new StringBuffer[numRows];
+    	
+    	int i = 0;
+    	int temp_numRows = numRows;
+    	while(i < len) {
+    		for(int index_r = 0; index_r < temp_numRows && i < len; index_r++) {
+    			output[index_r].append(s_matrix[i]);
+    		}
+    		temp_numRows = temp_numRows -2;
+    		if (temp_numRows<1) {
+    			temp_numRows = numRows;
+    		}
+    		for(int index_r = temp_numRows -1; index_r >= 0 && i < len; index_r++) {
+    			output[index_r].append(s_matrix[i]);
+    		}
+    		temp_numRows = temp_numRows -2;
+    		if (temp_numRows<1) {
+    			temp_numRows = numRows;
+    		}
+    	}
+    	
+    }
+    
+    public static void main(String[] args) {
+    	int a = 5;
+    	int b = 4;
+    	System.out.println(new Double(a)/b);
+    	String c="abcdef";
+    	String[] d = c.split("");
+    	System.out.println(d[2]);
+    	
+    }
+    
+}

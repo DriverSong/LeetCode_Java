@@ -1,0 +1,17 @@
+package leetcode;
+
+public class CombinationSum {
+	public List<List<Integer>> combinationSum(int[] candidates, int target) {
+		int length = candidates.length;
+		int[] dp = new int[target+1];
+    	for(int j = 0; j < target; j++) {
+    		dp[j] = 0;
+    	}
+        dp[0] = 1;
+        for(int i = 0; i < length; i++) {
+        	for(int j = 0; j + candidates[i] < target+1; j++) {
+        		dp[j + candidates[i]] = dp[j] + dp[j + candidates[i]];
+        	}
+        }
+    }
+}

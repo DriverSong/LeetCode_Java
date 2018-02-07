@@ -1,0 +1,14 @@
+package leetcode;
+
+class Reverse_Integer {
+    public int reverse(int x) {
+        StringBuffer buffer = new StringBuffer();
+        while(true) {
+        	int temp = x%10;
+        	buffer.append(temp);
+        	if(new Double(x)/10 > 1) {
+        		x = x - 
+        	}
+        }
+    }
+}

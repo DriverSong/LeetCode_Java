@@ -1,0 +1,20 @@
+package leetcode;
+
+public class CombinationSum {
+	public List<List<Integer>> combinationSum(int[] candidates, int target) {
+		int length = candidates.length;
+		int[][] dp = new int[length][target];
+		int[][] num = new int[length][target];
+		for(int i = 0; i < length; i++) {
+        	for(int j = 0; j < target; j++) {
+        		dp[i][j] = -1;
+        	}
+        }
+        dp[0][0] = 0;
+        for(int i = 0; i < length; i++) {
+        	for(int k = 0; dp[i][k*candidates[i]] < target; k++) {
+        		
+        	}
+        }
+    }
+}

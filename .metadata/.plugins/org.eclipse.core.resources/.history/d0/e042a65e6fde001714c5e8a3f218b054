@@ -1,0 +1,27 @@
+package leetcode;
+
+public class Valid_Parentheses {
+	public static boolean isValid(String s) {
+		int length = s.length();
+		int left = 1;
+		int right = length;
+		boolean flag = true;
+		while(left<=right) {
+			if (s.indexOf(right-1) - s.indexOf(left-1) == 1) {
+				System.out.println(s.indexOf(right-1));
+				System.out.println(s.indexOf(left-1));
+				left++;
+				right --;
+			}else {
+				flag = false;
+				break;
+			}
+		}
+		System.out.println(flag);
+		return flag;
+    }
+	public static void main(String arg[]) {
+		String string = "()";
+		isValid(string);
+	}
+}

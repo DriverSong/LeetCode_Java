@@ -1,0 +1,20 @@
+package leetcode;
+
+public class BalancedBinaryTree {
+	
+  //Definition for a binary tree node.
+	public class TreeNode {
+		 int val;
+		 TreeNode left;
+		 TreeNode right;
+		 TreeNode(int x) { val = x; }
+	}
+	public boolean isBalanced(TreeNode root) {
+	    TreeNode temp = root;
+		while(temp.left != null && temp.right != null) {
+			if (depth(temp.left) - depth(temp.right) >1 || depth(temp.left) - depth(temp.right) < -1) {
+				
+			}
+		}
+	}
+}

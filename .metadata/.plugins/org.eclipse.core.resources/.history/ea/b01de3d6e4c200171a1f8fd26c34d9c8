@@ -1,0 +1,32 @@
+package leetcode;
+
+
+class Solution {
+    public String convert(String s, int numRows) {
+    	
+    	String[] OutputStream = new String[s.length()];
+    	double doubleCols = new Double(s.length()/numRows);
+    	int numCols = 0;
+    	if (doubleCols > new Double(doubleCols).intValue()) {
+    		numCols = new Double(doubleCols + 1).intValue();
+    	}else {
+    		numCols = new Double(doubleCols).intValue();
+    	}
+    	
+        for (int i = 0; i < numRows;i++) {
+//        	if (i < numRows/2) {
+////        		OutputStream[i+ numCols*(numRows+1)] = 
+//        	}
+        }
+        
+    }
+    public void main() {
+    	int a = 5;
+    	int b = 4;
+    	System.out.println(a/b);
+    }
+}
+if (__main__ == "main"){
+	Solution A = new Solution();
+	A.main();
+}

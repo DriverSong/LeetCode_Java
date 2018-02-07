@@ -1,0 +1,20 @@
+package leetcode;
+
+public class Valid_Parentheses {
+	public boolean isValid(String s) {
+		int length = s.length();
+		int left = 0;
+		int right = length;
+		boolean flag = true;
+		while(left<=right) {
+			if (s.indexOf(right) - s.indexOf(left) == 1) {
+				left++;
+				right --;
+			}else {
+				flag = false;
+				break;
+			}
+		}
+		return flag
+    }
+}

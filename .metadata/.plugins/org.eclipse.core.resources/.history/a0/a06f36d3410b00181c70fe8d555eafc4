@@ -1,0 +1,46 @@
+package leetcode;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+
+public class GenerateParentheses {
+	public List<String> generateParenthesis(int n) {
+		Stack< Character> stack = new Stack<>();
+		int count = n;
+		List<String> out = new ArrayList<>();
+		backTrack(out, stack, count - 1, '(', new ArrayList<>());
+		return out;
+	}
+
+	private void backTrack(List<String> out, Stack<Character> stack, int count, char input, List<Character> temp) {
+		temp.add(input);
+		System.out.println(temp.size());
+		if (input == '(') stack.push(input);
+		else {
+			if(!stack.isEmpty() && stack.peek() == '(') {
+				stack.pop();
+				if (count == 0 && stack.isEmpty()) {
+					out.add(temp.toString());
+					return;
+				}
+			}
+			else return;
+		}
+//		backTrack(out, stack, count, ')', temp);
+		if (count > 0) {
+			backTrack(out, stack, count - 1, '(', temp);
+		}
+		backTrack(out, stack, count, ')', temp);
+		temp.remove(temp.size() - 1);
+		System.out.println(temp.size());
+	}
+	public static void main(String arg[]) {
+		GenerateParentheses generateParentheses = new GenerateParentheses();
+		List<String> out = generateParentheses.generateParenthesis(3);
+		System.out.println("--------------------");
+		System.out.println(out.size());
+		System.out.println(out);
+	}
+}

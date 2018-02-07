@@ -1,0 +1,38 @@
+package leetcode;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class BalancedBinaryTree {
+	
+  //Definition for a binary tree node.
+	public class TreeNode {
+		 int val;
+		 TreeNode left;
+		 TreeNode right;
+		 TreeNode(int x) { val = x; }
+	}
+	public boolean isBalanced(TreeNode root) {
+		if(root == null) return true;
+	    Queue<TreeNode> queue = new LinkedList<>();
+	    queue.offer(root);
+		while(!queue.isEmpty()) {
+			TreeNode temp = queue.poll();
+			if (depth(temp.left) - depth(temp.right) > 1 || depth(temp.left) - depth(temp.right) < -1) {
+				return false;
+			}
+			if(temp.left != null) {
+				queue.offer(temp.left);
+			}
+			if(temp.right != null) {
+				queue.offer(temp.right);
+			}
+		}
+		return true;
+	}
+	private int depth(TreeNode treeNode) {
+		if(treeNode == null) return 0;
+		return Math.max(depth(treeNode.left),depth(treeNode.right));
+	}
+}

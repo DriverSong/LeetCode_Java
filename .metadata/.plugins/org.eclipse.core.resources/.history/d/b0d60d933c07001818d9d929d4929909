@@ -1,0 +1,28 @@
+package leetcode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class CombinationSum {
+	public List<List<Integer>> combinationSum(int[] candidates, int target) {
+		Arrays.sort(candidates);
+		List<List<Integer>> out = new ArrayList<>();
+		List<Integer> tempList = new ArrayList<>();
+		backTrack(out, candidates, tempList, target);
+		return out;
+    }
+	private void backTrack(List<List<Integer>> out, int[] candidates, List<Integer> tempList, int target) {
+		if (target < 0) return;
+		for(int i = 0; i < candidates.length; i++) {
+			target = target - candidates[i];
+			tempList.add(candidates[i]);
+			if (target == 0) {
+				out.add(tempList);
+			}else {
+				backTrack(out, candidates, tempList, target);
+			}
+		}
+		tempList.remove(tempList.size() - 1);
+	}
+}

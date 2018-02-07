@@ -1,0 +1,64 @@
+package leetcode;
+
+
+class Solution {
+    public static String convert(String s, int numRows) {//行数
+    	String[] s_matrix = s.split("");//字符串转数组
+    	int len = s_matrix.length();
+//    	int colGroup = 0;//每组的列数
+//    	int sizeGroup = 0;//每组的大小
+//    	int numGroup = 0;//组的个数
+//    	if (numRows%2 == 0) {
+//    		colGroup = numRows/2;
+//    		sizeGroup = (numRows+2)*colGroup/sizeGroup;
+//    	}else {
+//    		colGroup = (numRows + 1)/2;
+//    		sizeGroup = (numRows+1)*colGroup/sizeGroup;
+//    	}
+//		numGroup = (int)  Math.ceil(new Double(s)/sizeGroup);
+    	StringBuffer[] output = new StringBuffer[numRows];
+    	
+    	int i = 0;
+    	int temp_numRows = numRows;
+    	while(i < len) {
+    		//向下输入
+    		for(int index_r = 0; index_r < temp_numRows && i < len; index_r++) {
+    			output[index_r].append(s_matrix[i]);
+    		}
+    		//更新行数
+    		temp_numRows = numRows_update(temp_numRows, numRows);
+    		
+    		//向上输入
+    		if (temp_numRows<1) {
+    			temp_numRows = numRows;
+    		}
+    		for(int index_r = temp_numRows -1; index_r >= 0 && i < len; index_r++) {
+    			output[index_r].append(s_matrix[i]);
+    		}
+    		//更新行数
+    		temp_numRows = numRows_update(temp_numRows, numRows);
+    	}
+    	for (i = 1; i < numRows; i++) {
+    		output[0].append(output[i]);
+    	}
+    	return output[0].toString();
+    	
+    }
+    //更新行数
+    private static int numRows_update(int numRows, int numRows_row) {
+    	int temp_numRows = numRows;
+    	//行数减2
+    	temp_numRows = temp_numRows -2;
+    	//若小于1，则变为初始行数
+		if (temp_numRows<1) {
+			temp_numRows = numRows_row;
+		}
+		return temp_numRows;
+    }
+    
+    public static void main(String[] args) {
+    	String aString = convert("abcdefghijklmn", 5);
+    	System.out.println(aString);
+    }
+    
+}

@@ -1,0 +1,56 @@
+package leetcode;
+
+class Reverse_Integer {
+    public static int reverse(int x){
+    	//判断是否溢出
+    	System.out.println(x);
+    	System.out.println(Integer.MAX_VALUE);
+    	System.out.println(Math.pow(2,31 ) - 1 );
+    	System.out.println(Integer.MIN_VALUE);
+    	if(x<-Math.pow(2,31 )&& x > (Math.pow(2,31 ) - 1 )){
+    		System.out.println("a");
+    		return 0;
+    	}
+    	try {
+	    	//输出
+	    	int reverse_x = 0;
+	    	//int转stringBuffer
+	        StringBuffer buffer = new StringBuffer();
+	        //判断正负
+	        boolean IsPositive = true ;
+	    	if(x < 0) {
+	    		IsPositive = false;
+	    		//取模
+	    		x = - x;
+	    	}
+	    	//从个位开始读取
+	        while(true) {
+	        	int temp = x%10;
+	        	buffer.append(temp);
+	        	if(x/10 >= 1) {
+	        		x = (x - temp)/10;
+	        	}else {
+					break;
+				}
+	        }
+	        //StringBuffer转String转int
+	        long temp_x = Long.parseLong(buffer.toString());
+	        if(IsPositive == false) {
+	        	temp_x = -temp_x;
+	        }
+	        //判断输出是否溢出
+	        if(temp_x>=-Math.pow(2,31 )&& temp_x <= (Math.pow(2,31 ) - 1 )){
+	        	System.out.println("b");
+	        	System.out.println(Math.pow(2,31 ));
+	        		reverse_x = (int)temp_x;
+	        }
+	        return reverse_x;
+    	}catch (Exception e) {
+    		return 0;
+		}
+    }
+    public static void main(String[] arg){
+    	int a = reverse(-2147483648);
+    	System.out.println(a);
+    }
+}

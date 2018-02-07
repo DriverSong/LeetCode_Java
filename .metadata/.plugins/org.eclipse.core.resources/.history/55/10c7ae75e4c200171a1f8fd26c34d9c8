@@ -1,0 +1,17 @@
+package leetcode;
+
+
+class Solution {
+    public String convert(String s, int numRows) {
+    	
+    	String[] OutputStream = new String[s.length()];
+    	int numCols = s.length()/numRows;
+    	
+        for (int i = 0; i < numRows;i++) {
+        	if (i < numRows/2) {
+        		OutputStream[i+ numCols*(numRows+1)] = 
+        	}
+        }
+        
+    }
+}

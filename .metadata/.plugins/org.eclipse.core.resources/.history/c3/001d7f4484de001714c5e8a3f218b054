@@ -1,0 +1,61 @@
+package leetcode;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Valid_Parentheses {
+	public static boolean isValid(String s) {
+//		int length = s.length();
+//		int left = 1;
+//		int right = length;
+//		boolean flag = true;
+//		while(left<=right) {
+////			System.out.println(s.charAt(right-1));
+////			System.out.println(s.charAt(left-1));
+//			if (s.charAt(right-1)- s.charAt(left-1) == 1) {
+//				left ++;
+//				right --;
+//			}else {
+//				flag = false;
+//				break;
+//			}
+//		}
+////		System.out.println(flag);
+//		return flag;
+		boolean flag = true;
+		int length = s.length();
+		if (length < 2) {
+			return false;
+		}else {
+			for (int i = 0; i < s.length() - 1; i++) {
+				char a = s.charAt(i);
+				char b = s.charAt(i+1);
+				if ((a-b) ==  -53 || (a-b) ==  -83 ||(a-b) == 50||(a-b) ==  -32 ||(a-b) ==  -61 ||(a-b) ==  -9 || (a-b) == 0) {
+					flag = false;
+				}
+			}
+		}
+		if(s.charAt(s.length()-1) == "[".charAt(0) || s.charAt(s.length()-1) == "(".charAt(0) || s.charAt(s.length()-1) == "{".charAt(0) )
+			flag = false;
+		if(s.charAt(0) == "]".charAt(0) || s.charAt(0) == ")".charAt(0) || s.charAt(0) == "}".charAt(0))
+			flag = false;
+		if(s.length()%2 == 1)
+			flag = false;
+		System.out.println(flag);
+		return flag;
+    }
+	public static void main(String arg[]) {
+//		String string = "()[] {}";
+//		System.out.println(string.charAt(0)-string.charAt(3));
+//		System.out.println(string.charAt(0)-string.charAt(5));
+//		System.out.println("---------------------------------------------");
+//		System.out.println(string.charAt(2)-string.charAt(1));
+//		System.out.println(string.charAt(2)-string.charAt(5));
+//		System.out.println("---------------------------------------------");
+//		System.out.println(string.charAt(4)-string.charAt(3));
+//		System.out.println(string.charAt(4)-string.charAt(1));
+//		System.out.println("---------------------------------------------");
+		String string = "{[}]";
+		isValid(string);
+	}
+}

@@ -1,0 +1,38 @@
+package leetcode;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Valid_Parentheses2 {
+	public static boolean isValid(String s) {
+		if(s.length() < 2) return false;
+		int left = 0;
+		int right = s.length() - 1;
+		boolean flag = true;
+		while(left<=right) {
+//	System.out.println(s.charAt(right-1));
+//	System.out.println(s.charAt(left-1));
+			if (s.charAt(right-1)- s.charAt(left-1) == 1) {
+				left ++;
+				right --;
+				return true;
+			}else {
+				
+			}
+		}
+    }
+	public static void main(String arg[]) {
+//		String string = "()[]{}";
+//		System.out.println(string.charAt(0)-string.charAt(3));
+//		System.out.println(string.charAt(0)-string.charAt(5));
+//		System.out.println("---------------------------------------------");
+//		System.out.println(string.charAt(2)-string.charAt(1));
+//		System.out.println(string.charAt(2)-string.charAt(5));
+//		System.out.println("---------------------------------------------");
+//		System.out.println(string.charAt(4)-string.charAt(3));
+//		System.out.println(string.charAt(4)-string.charAt(1));
+//		System.out.println("---------------------------------------------");
+		String string = "(([]){})";
+		isValid(string);
+	}
+}
