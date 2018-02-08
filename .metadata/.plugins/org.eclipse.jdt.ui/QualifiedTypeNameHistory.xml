@@ -38,6 +38,10 @@
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.awt.KeyboardFocusManager"/>
+<fullyQualifiedTypeName name="leetcode.MaxArea"/>
+<fullyQualifiedTypeName name="javax.print.attribute.standard.NumberUpSupported"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="leetcode.SearchinRotatedSortedArray"/>
 </qualifiedTypeNameHistroy>
