@@ -78,7 +78,7 @@ public class SearchinRotatedSortedArray {
 	}
 	public static void main(String arg[]) {
 		int[] nums = {5,1,3};
-		int target = 1;
+		int target = 0;
 		SearchinRotatedSortedArray newClass = new SearchinRotatedSortedArray();
 		newClass.search(nums, target);
 	}

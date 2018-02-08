@@ -1,13 +1,11 @@
 package leetcode;
 
-import java.awt.RenderingHints;
-
 public class SearchinRotatedSortedArray {
 	/*
 	 * my own solution, it is complicated.
 	 * Firstly, binarySearch can be achieved by using while block;
 	 * Secondly, my binarySearch has something wrong, I should observe if the nums[mid] is equal to the target, 
-	 *                 than move on to compare them and determine which one is larger.
+	 *                     than move on to compare them and determine which one is larger.
 	 * Thirdly, I think I should not focus just on the direct way to the correct answer. There may be some sub-action that can brief the question 
 	 *                 and don't improve the time complex of the question.
 	 */
@@ -42,43 +40,9 @@ public class SearchinRotatedSortedArray {
 //		}
 //		return -1;
 //	}
-	public int search(int[] nums, int target) {
-		int N = nums.length;
-		if (N == 0) return -1;
-		int minIdx = findMin(nums);
-		if (target == nums[minIdx]) return minIdx;
-		if (target == nums[N - 1]) return N - 1;
-		int left = (target < nums[N - 1]) ? minIdx : 0;
-		int right = (target > nums[N - 1]) ? minIdx : N - 1;
-		while(left <= right) {
-			int mid = (left + right)/2;
-			if (nums[mid] == target) {
-				System.out.println(mid);
-				return mid;
-			}else if (nums[mid] < target) {
-				left = mid + 1;
-			}else {
-				right = mid - 1;
-			}
-		}
-		System.out.println(-1);
-		return -1;
-	}
-	private int findMin(int[] nums) {
-		int left = 0;
-		int right = nums.length - 1;
-		int mid = (left + right)/2;
-		while(left < right) {
-			mid = (left + right)/2;
-			if(nums[mid] < nums[right]) right = mid;
-			else left = mid + 1;
-		}
-		System.out.println(left);
-		return left;
-	}
 	public static void main(String arg[]) {
 		int[] nums = {5,1,3};
-		int target = 1;
+		int target = 0;
 		SearchinRotatedSortedArray newClass = new SearchinRotatedSortedArray();
 		newClass.search(nums, target);
 	}

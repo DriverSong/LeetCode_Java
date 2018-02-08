@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="javax.xml.ws.AsyncHandler"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="org.w3c.dom.css.RGBColor"/>
-<fullyQualifiedTypeName name="java.awt.RenderingHints"/>
 <fullyQualifiedTypeName name="java.util.PrimitiveIterator"/>
 <fullyQualifiedTypeName name="leetcode.TWO_SUM"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
@@ -39,9 +38,12 @@
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.awt.KeyboardFocusManager"/>
 <fullyQualifiedTypeName name="leetcode.MaxArea"/>
 <fullyQualifiedTypeName name="javax.print.attribute.standard.NumberUpSupported"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="leetcode.SearchinRotatedSortedArray"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.ReadWriteLock"/>
+<fullyQualifiedTypeName name="java.awt.RenderingHints"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.IconifyAction"/>
+<fullyQualifiedTypeName name="java.awt.KeyboardFocusManager"/>
 </qualifiedTypeNameHistroy>
