@@ -1,0 +1,24 @@
+package leetcode;
+
+public class SearchforARange {
+	public int[] searchRange(int[] nums, int target) {
+		int[] out = {-1, -1};
+		int length = nums.length;
+		if (length == 0) return out;
+		if (length == 1) {
+			if (condition) 
+		}
+		out[0] = findBegin(nums, target);
+		out[1] = findEnd(nums, target);
+    }
+
+	private int findEnd(int[] nums, int target) {
+		
+		return 0;
+	}
+
+	private int findBegin(int[] nums, int target) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

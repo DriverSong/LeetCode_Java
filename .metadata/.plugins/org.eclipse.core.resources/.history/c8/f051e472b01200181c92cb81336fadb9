@@ -1,0 +1,9 @@
+package leetcode;
+
+public class SearchforARange {
+	public int[] searchRange(int[] nums, int target) {
+		int[] out = {-1, -1};
+		out[0] = findBegin(nums, target);
+		out[1] = findEnd(nums, target);
+    }
+}
