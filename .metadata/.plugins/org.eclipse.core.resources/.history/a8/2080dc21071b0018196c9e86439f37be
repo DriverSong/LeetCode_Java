@@ -1,0 +1,27 @@
+package leetcode;
+
+public class SymmetricTree {
+	 public class TreeNode {
+	     int val;
+	     TreeNode left;
+	     TreeNode right;
+	     TreeNode(int x) { val = x; }
+	 }
+    public boolean isSymmetric(TreeNode root) {
+        isReverse(root, root)
+    }
+	private Boolean isReverse(TreeNode root1, TreeNode root2) {
+		// TODO Auto-generated method stub
+		if (root1.val != root2.val) {
+			return false;
+		}
+		if (root1.val == root2.val ) {
+			if ((root1.left == null && root2.right != null) || (root1.left != null && root2.right == null) || (root1.right == null && root2.left != null) || (root1.right != null && root2.left == null)) {
+				return false;
+			}
+			if (root1.left == null && root1.right == null && root2.left == null && root2.right == null) {
+				
+			}
+		}
+	}
+}

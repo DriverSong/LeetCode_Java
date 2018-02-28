@@ -1,0 +1,10 @@
+package leetcode;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class GroupAnagrams {
+	public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> list = new ArrayList<>();
+    }
+}

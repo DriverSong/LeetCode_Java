@@ -28,7 +28,6 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="leetcode.NextPermutation"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.lang.Void"/>
 <fullyQualifiedTypeName name="javax.swing.text.AbstractDocument.BranchElement"/>
 <fullyQualifiedTypeName name="leetcode.GenerateParentheses"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
@@ -46,4 +45,6 @@
 <fullyQualifiedTypeName name="java.awt.RenderingHints"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.IconifyAction"/>
 <fullyQualifiedTypeName name="java.awt.KeyboardFocusManager"/>
+<fullyQualifiedTypeName name="java.lang.Void"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
 </qualifiedTypeNameHistroy>

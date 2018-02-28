@@ -1,0 +1,26 @@
+package leetcode;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PermutationsofCollection {
+	public List<List<Integer>> permute(int[] nums) {
+		List<List<Integer>> out = new ArrayList<>();
+        backTrack(nums, 0, nums.length,new ArrayList<Integer>(), out);
+        return out;
+    }
+
+	private void backTrack(int[] nums, int begin, int end, ArrayList<Integer> arrayList, List<List<Integer>> out) {
+		if (begin == end) {
+			out.add(arrayList);
+		}
+		for(int i = begin; i < end; i++) {
+			arrayList.add(nums[i]);
+			backTrack(nums, i + 1, end, arrayList, out);
+			arrayList.remove(nums[i]);
+		}
+	}
+	public static void main(String arg[]) {
+		
+	}
+}

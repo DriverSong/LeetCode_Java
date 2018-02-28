@@ -1,0 +1,19 @@
+package leetcode;
+
+public class MaxiumDepthofBinaryTree {
+	 public class TreeNode {
+	     int val;
+	     TreeNode left;
+	     TreeNode right;
+	     TreeNode(int x) { val = x; }
+	 }
+	public int maxDepth(TreeNode root) {
+        if(root == null) return 0;
+      //--------------------The solution which calls the Math function.---------------------
+        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+      //---------------------The solution which doesn't call the Math function.-----------------------
+        int deepLeft = maxDepth(root.left) + 1;
+        int deepRight = maxDepth(root.right);
+        return deepLeft > deepRight ? deepLeft : deepRight;
+    }
+}

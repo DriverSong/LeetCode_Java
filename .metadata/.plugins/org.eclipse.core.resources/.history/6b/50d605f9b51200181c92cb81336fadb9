@@ -1,0 +1,7 @@
+package leetcode;
+
+public class PermutationsofCollection {
+	public List<List<Integer>> permute(int[] nums) {
+        
+    }
+}
