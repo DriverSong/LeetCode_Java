@@ -1,0 +1,50 @@
+package leetcode;
+
+import java.util.List;
+import java.util.Stack;
+
+import javax.security.auth.x500.X500Principal;
+
+public class MinStack {
+	/** initialize your data structure here. */
+	private Stack<Long> stack;
+	private int min;
+    public MinStack() {
+        stack = new Stack<>();
+        min = 0;
+    }
+    
+    public void push(int x) {
+    	if (stack.isEmpty()) {
+			stack.push(Long(x));
+			min = x;
+		}
+    	stack.push(x - min);
+    	if (x < min) min = x;
+    }
+    
+    public void pop() {
+    	int peek = stack.pop();
+        if (peek < 0) {
+        	min = min - peek;
+        }
+    }
+    
+    public int top() {
+        int peek = stack.peek();
+        if (peek < 0) return min;
+        return min + peek;
+    }
+    
+    public int getMin() {
+        return min;
+    }
+}
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack obj = new MinStack();
+ * obj.push(x);
+ * obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.getMin();
+ */
