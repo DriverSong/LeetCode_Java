@@ -1,0 +1,31 @@
+package leetcode;
+
+public class ReverseLinkedList {
+	public class ListNode {
+		int val;
+		ListNode next;
+		ListNode(int x) { val = x; }
+	}
+    public ListNode reverseList(ListNode head) {
+    	//递归做法，每次求reverseList(head.next)，再将head添到得到的链表尾部，但是超时了。
+//    	if (head == null) return null;
+//        if (head.next != null) {
+//			ListNode newhead = reverseList(head.next);
+//			ListNode temp = newhead;
+//			while(temp.next != null) temp = temp.next;
+//			temp.next = head;
+//			return newhead;
+//		}
+//        return head;
+    	//动归做法，遍历链表，每次将遍历到的链表元素添到新链表的头部
+    	ListNode newHead = null;
+    	ListNode node = head;
+    	while(node != null) {
+    		ListNode temp = new ListNode(node.val);
+    		temp.next = newHead;
+    		newHead = temp;
+    		node = node.next;
+    	}
+    	return newHead;
+    }
+}

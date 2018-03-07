@@ -1,0 +1,28 @@
+package leetcode;
+
+public class ReverseLinkedList {
+	public class ListNode {
+		int val;
+		ListNode next;
+		ListNode(int x) { val = x; }
+	}
+    public ListNode reverseList(ListNode head) {
+//    	if (head == null) return null;
+//        if (head.next != null) {
+//			ListNode newhead = reverseList(head.next);
+//			ListNode temp = newhead;
+//			while(temp.next != null) temp = temp.next;
+//			temp.next = head;
+//			return newhead;
+//		}
+//        return head;
+    	ListNode newHead = null;
+    	while(head != null) {
+    		ListNode temp = null;
+    		temp.val = head.val;
+    		temp.next = newHead;
+    		newHead = temp;
+    		head = head.next;
+    	}
+    }
+}
