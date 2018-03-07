@@ -1,0 +1,24 @@
+package leetcode;
+
+public class MajorityElement {
+    public int majorityElement(int[] nums) {
+        int length = nums.length;
+        if (length == 1) return nums[0];
+        int keynum = nums[0];
+        int count = 1;
+        for(int i = 1; i < length; i++) {
+        	int temp = nums[i];
+        	if (count == 0) {
+				keynum = temp;
+				count ++;
+			}else if (count > 0) {
+				if (temp == keynum) {
+					count ++;
+				}else {
+					count --;
+				}
+			}
+        }
+        return keynum;
+    }
+}
