@@ -1,0 +1,52 @@
+package leetcode;
+
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import javax.xml.transform.Templates;
+
+public class InsertofTwoLinkedList {
+	public class ListNode {
+		int val;
+		ListNode next;
+		ListNode(int x) {
+			val = x;
+			next = null;
+		}
+	}
+	//my solution
+	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+		Set<ListNode> set = new HashSet<>();
+		if (headA == null || headB == null) return null;
+		ListNode temp = headA;
+		while(temp != null) {
+			set.add(temp);
+			temp = temp.next;
+		}
+		temp = headB;
+		while(temp != null) {
+			if (set.contains(temp)) return temp;
+			temp = temp.next;
+		}
+		return null;
+    }
+	//link the two list and then find if the new linked_list has cycle.
+	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+		if (headA == null || headB == null) {
+			return null;
+		}
+		ListNode a = headA;
+		ListNode b = headB;
+		/*
+		 * 有两个遍历，第一个遍历两个链表均遍历一遍自身，在遍历完自身后，遍历另外一个链表;
+		 * 当两个链表长度相同时，第一次遍历就能判断是否有公共节点；
+		 * 当两个链表长度不同时，第一次遍历不能做出判断
+		 */
+		while(a != b) {
+			a = a == null ? headB : a.next;
+			b = b == null ? headA : b.next;
+		}
+		return a;
+    }
+}
