@@ -1,0 +1,11 @@
+package leetcode;
+
+public class UniquePath {
+	public int uniquePaths(int m, int n) {
+        if(m == 1) {
+        	return 1;
+        }else {
+			
+		}
+    }
+}

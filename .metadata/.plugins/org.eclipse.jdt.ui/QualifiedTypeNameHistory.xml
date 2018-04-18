@@ -8,22 +8,18 @@
 <fullyQualifiedTypeName name="org.w3c.dom.css.RGBColor"/>
 <fullyQualifiedTypeName name="java.util.PrimitiveIterator"/>
 <fullyQualifiedTypeName name="leetcode.TWO_SUM"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.portable.ValueInputStream"/>
 <fullyQualifiedTypeName name="javax.sql.rowset.Joinable"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="leetcode.ClimbingStairs"/>
 <fullyQualifiedTypeName name="leetcode.InvertBinaryTree.TreeNode"/>
 <fullyQualifiedTypeName name="java.lang.Byte"/>
 <fullyQualifiedTypeName name="leetcode.MinCostClimbingStairs"/>
-<fullyQualifiedTypeName name="javax.xml.transform.Templates"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="leetcode.CombinationSum"/>
 <fullyQualifiedTypeName name="leetcode.JumpGame"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="leetcode.RotateImage"/>
-<fullyQualifiedTypeName name="leetcode.ListNode"/>
 <fullyQualifiedTypeName name="leetcode.NextPermutation"/>
 <fullyQualifiedTypeName name="javax.swing.text.AbstractDocument.BranchElement"/>
 <fullyQualifiedTypeName name="leetcode.GenerateParentheses"/>
@@ -42,7 +38,6 @@
 <fullyQualifiedTypeName name="java.lang.Void"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
 <fullyQualifiedTypeName name="leetcode.SellStock"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -52,4 +47,15 @@
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
 <fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="javax.xml.transform.Templates"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="leetcode.ReverseLinkedList.ListNode"/>
+<fullyQualifiedTypeName name="leetcode.ListNode"/>
+<fullyQualifiedTypeName name="org.omg.PortableInterceptor.IORInterceptor"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.ARG_IN"/>
+<fullyQualifiedTypeName name="leetcode.UniquePath"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="leetcode.SubarraySum"/>
 </qualifiedTypeNameHistroy>
