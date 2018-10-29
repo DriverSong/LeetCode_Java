@@ -68,14 +68,14 @@ public class CherryPickup {
 					
 				}
 			}
-        	if(step_col == 0 && step_row == 0 && )
+        	if(step_col == 0 && step_row == 0)
         	if (grid[step_row+1][step_col] == -1 && grid[step_row][step_col+1] == -1) {
         		if ((step_col+step_row) == 1) {
 					return 0;
 				}
 				int temp = stack.pop();
 				i--;
-				if (temp) {
+				if (temp == 1) {
 					
 				}
 			}

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AddressApp/AddressApp.iml" filepath="$PROJECT_DIR$/AddressApp/AddressApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LeetCode_Java.iml" filepath="$PROJECT_DIR$/.idea/LeetCode_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyTest/MyTest.iml" filepath="$PROJECT_DIR$/MyTest/MyTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrimaryStageController/PrimaryStageController.iml" filepath="$PROJECT_DIR$/PrimaryStageController/PrimaryStageController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZigZag/ZigZag.iml" filepath="$PROJECT_DIR$/ZigZag/ZigZag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springwebapp/springwebapp.iml" filepath="$PROJECT_DIR$/springwebapp/springwebapp.iml" />
     </modules>
   </component>
 </project>
